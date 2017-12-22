@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xhc.test.mybatis.dao.OperReportMapper" >
+  <resultMap id="BaseResultMap" type="com.xhc.test.mybatis.entity.OperReport" >
+    <id column="SERIAL_NO" property="serialNo" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="REPORT_YEAR" property="reportYear" jdbcType="VARCHAR" />
+    <result column="TITLE" property="title" jdbcType="VARCHAR" />
+    <result column="CONTENT" property="content" jdbcType="VARCHAR" />
+    <result column="REPORT_URL" property="reportUrl" jdbcType="VARCHAR" />
+    <result column="UPDATE_TIME" property="updateTime" jdbcType="VARCHAR" />
+    <result column="UPDATE_USER" property="updateUser" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="PIC_NO" property="picNo" jdbcType="VARCHAR" />
+    <result column="PIC_URL" property="picUrl" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    SERIAL_NO, STATUS, REPORT_YEAR, TITLE, CONTENT, REPORT_URL, UPDATE_TIME, UPDATE_USER, 
+    TYPE, PIC_NO, PIC_URL
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from OPER_REPORT
+    where SERIAL_NO = #{serialNo,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from OPER_REPORT
+    where SERIAL_NO = #{serialNo,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.xhc.test.mybatis.entity.OperReport" >
+    insert into OPER_REPORT (SERIAL_NO, STATUS, REPORT_YEAR, 
+      TITLE, CONTENT, REPORT_URL, 
+      UPDATE_TIME, UPDATE_USER, TYPE, 
+      PIC_NO, PIC_URL)
+    values (#{serialNo,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{reportYear,jdbcType=VARCHAR}, 
+      #{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, #{reportUrl,jdbcType=VARCHAR}, 
+      #{updateTime,jdbcType=VARCHAR}, #{updateUser,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{picNo,jdbcType=VARCHAR}, #{picUrl,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.xhc.test.mybatis.entity.OperReport" >
+    insert into OPER_REPORT
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        SERIAL_NO,
+      </if>
+      <if test="status != null" >
+        STATUS,
+      </if>
+      <if test="reportYear != null" >
+        REPORT_YEAR,
+      </if>
+      <if test="title != null" >
+        TITLE,
+      </if>
+      <if test="content != null" >
+        CONTENT,
+      </if>
+      <if test="reportUrl != null" >
+        REPORT_URL,
+      </if>
+      <if test="updateTime != null" >
+        UPDATE_TIME,
+      </if>
+      <if test="updateUser != null" >
+        UPDATE_USER,
+      </if>
+      <if test="type != null" >
+        TYPE,
+      </if>
+      <if test="picNo != null" >
+        PIC_NO,
+      </if>
+      <if test="picUrl != null" >
+        PIC_URL,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        #{serialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="reportYear != null" >
+        #{reportYear,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="reportUrl != null" >
+        #{reportUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="updateUser != null" >
+        #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="picNo != null" >
+        #{picNo,jdbcType=VARCHAR},
+      </if>
+      <if test="picUrl != null" >
+        #{picUrl,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xhc.test.mybatis.entity.OperReport" >
+    update OPER_REPORT
+    <set >
+      <if test="status != null" >
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="reportYear != null" >
+        REPORT_YEAR = #{reportYear,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        TITLE = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        CONTENT = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="reportUrl != null" >
+        REPORT_URL = #{reportUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        UPDATE_TIME = #{updateTime,jdbcType=VARCHAR},
+      </if>
+      <if test="updateUser != null" >
+        UPDATE_USER = #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        TYPE = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="picNo != null" >
+        PIC_NO = #{picNo,jdbcType=VARCHAR},
+      </if>
+      <if test="picUrl != null" >
+        PIC_URL = #{picUrl,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where SERIAL_NO = #{serialNo,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xhc.test.mybatis.entity.OperReport" >
+    update OPER_REPORT
+    set STATUS = #{status,jdbcType=VARCHAR},
+      REPORT_YEAR = #{reportYear,jdbcType=VARCHAR},
+      TITLE = #{title,jdbcType=VARCHAR},
+      CONTENT = #{content,jdbcType=VARCHAR},
+      REPORT_URL = #{reportUrl,jdbcType=VARCHAR},
+      UPDATE_TIME = #{updateTime,jdbcType=VARCHAR},
+      UPDATE_USER = #{updateUser,jdbcType=VARCHAR},
+      TYPE = #{type,jdbcType=VARCHAR},
+      PIC_NO = #{picNo,jdbcType=VARCHAR},
+      PIC_URL = #{picUrl,jdbcType=VARCHAR}
+    where SERIAL_NO = #{serialNo,jdbcType=VARCHAR}
+  </update>
+</mapper>

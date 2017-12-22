@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC '-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN'
+        'http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd'>
+<generatorConfiguration>
+    <!--<classPathEntry location="/Users/mymac/.m2/repository/mysql/mysql-connector-java/5.1.25/mysql-connector-java-5.1.25.jar"/>-->
+    <classPathEntry location="/Users/mymac/Library/Preferences/DataGrip2017.2/jdbc-drivers/Oracle/12.1.0.2/ojdbc6-12.1.0.2.jar"/>
+
+    <context id="my" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressDate" value="false"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!---->
+        <!--<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/test?characterEncoding=utf-8" userId="root" password="root"/>-->
+        <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@10.211.17.91:1521/brh" userId="new_portal" password="new5020"/>
+
+        <javaModelGenerator targetPackage="com.xhc.test.mybatis.entity" targetProject="/Users/mymac/intelliJ_ws/mybatis/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mybatis.entityMapper" targetProject="/Users/mymac/intelliJ_ws/mybatis/src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator targetPackage="com.xhc.test.mybatis.dao" targetProject="/Users/mymac/intelliJ_ws/mybatis/src/main/java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!--  tableName 要自动生成的表名, domainObjectName生成的bean xml dao名字-->
+        <table domainObjectName="OperReport" tableName="OPER_REPORT" enableCountByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false" selectByExampleQueryId="false" >
+            <!--<columnRenamingRule searchString="^D_"
+                                 replaceString=""/>-->
+        </table>
+    </context>
+</generatorConfiguration>

@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xhc.test.mybatis.dao.PublishinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.xhc.test.mybatis.entity.Publishinfo" >
+    <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
+    <result column="USERTYPE" property="usertype" jdbcType="VARCHAR" />
+    <result column="UPDATEUSER" property="updateuser" jdbcType="VARCHAR" />
+    <result column="UPDATETIME" property="updatetime" jdbcType="VARCHAR" />
+    <result column="ETPNAME" property="etpname" jdbcType="VARCHAR" />
+    <result column="ETPLEGALER" property="etplegaler" jdbcType="VARCHAR" />
+    <result column="REGISTFUND" property="registfund" jdbcType="DECIMAL" />
+    <result column="PAYMENTFUND" property="paymentfund" jdbcType="DECIMAL" />
+    <result column="REGISTPROVINCE" property="registprovince" jdbcType="VARCHAR" />
+    <result column="REGISTCITY" property="registcity" jdbcType="VARCHAR" />
+    <result column="REGISTPLACE" property="registplace" jdbcType="VARCHAR" />
+    <result column="FOUNDTIME" property="foundtime" jdbcType="VARCHAR" />
+    <result column="MANAGEAREA" property="managearea" jdbcType="VARCHAR" />
+    <result column="WORKPROVINCE" property="workprovince" jdbcType="VARCHAR" />
+    <result column="WORKCITY" property="workcity" jdbcType="VARCHAR" />
+    <result column="WORKPLACE" property="workplace" jdbcType="VARCHAR" />
+    <result column="GUILD" property="guild" jdbcType="VARCHAR" />
+    <result column="GUILDSEC" property="guildsec" jdbcType="VARCHAR" />
+    <result column="CARDTYPE" property="cardtype" jdbcType="VARCHAR" />
+    <result column="YESTERYEARINCOME" property="yesteryearincome" jdbcType="DECIMAL" />
+    <result column="SHORTDEBT" property="shortdebt" jdbcType="DECIMAL" />
+    <result column="LONGDEBT" property="longdebt" jdbcType="DECIMAL" />
+    <result column="ETPCREDIT" property="etpcredit" jdbcType="VARCHAR" />
+    <result column="ETPCREDITFILE" property="etpcreditfile" jdbcType="VARCHAR" />
+    <result column="ETPBADLOANNUM" property="etpbadloannum" jdbcType="DECIMAL" />
+    <result column="ETPBADLOANMONEY" property="etpbadloanmoney" jdbcType="DECIMAL" />
+    <result column="LEGALERCREDIT" property="legalercredit" jdbcType="VARCHAR" />
+    <result column="LEGALERCREDITFILE" property="legalercreditfile" jdbcType="VARCHAR" />
+    <result column="OVERDUENINETYNUM" property="overdueninetynum" jdbcType="DECIMAL" />
+    <result column="OVERDUENUM" property="overduenum" jdbcType="DECIMAL" />
+    <result column="OVERDUEMONEY" property="overduemoney" jdbcType="DECIMAL" />
+    <result column="OTHERLOAN" property="otherloan" jdbcType="VARCHAR" />
+    <result column="BANKLOANMONEY" property="bankloanmoney" jdbcType="DECIMAL" />
+    <result column="BANKLOANNUM" property="bankloannum" jdbcType="DECIMAL" />
+    <result column="PLATFORMLOANMONEY" property="platformloanmoney" jdbcType="DECIMAL" />
+    <result column="PLATFORMLOANNUM" property="platformloannum" jdbcType="DECIMAL" />
+    <result column="USETYPE" property="usetype" jdbcType="VARCHAR" />
+    <result column="GAINTYPE" property="gaintype" jdbcType="VARCHAR" />
+    <result column="REPAYMENTCHANG" property="repaymentchang" jdbcType="VARCHAR" />
+    <result column="REPAYMENTMEMO" property="repaymentmemo" jdbcType="VARCHAR" />
+    <result column="APPEALTYPE" property="appealtype" jdbcType="VARCHAR" />
+    <result column="APPEALPERSON" property="appealperson" jdbcType="VARCHAR" />
+    <result column="APPEALREASON" property="appealreason" jdbcType="VARCHAR" />
+    <result column="PENALTYTYPE" property="penaltytype" jdbcType="VARCHAR" />
+    <result column="PENALTYORG" property="penaltyorg" jdbcType="VARCHAR" />
+    <result column="PENALTYREASON" property="penaltyreason" jdbcType="VARCHAR" />
+    <result column="DEGREE" property="degree" jdbcType="VARCHAR" />
+    <result column="MARRYTYPE" property="marrytype" jdbcType="VARCHAR" />
+    <result column="WORKYEAR" property="workyear" jdbcType="VARCHAR" />
+    <result column="WORKTYPE" property="worktype" jdbcType="VARCHAR" />
+    <result column="MONTHINCOME" property="monthincome" jdbcType="VARCHAR" />
+    <result column="MONTHPAY" property="monthpay" jdbcType="VARCHAR" />
+    <result column="PERCREDIT" property="percredit" jdbcType="VARCHAR" />
+    <result column="PERCREDITFILE" property="percreditfile" jdbcType="VARCHAR" />
+    <result column="SOCIETYNO" property="societyno" jdbcType="VARCHAR" />
+    <result column="HOLDERTYPE" property="holdertype" jdbcType="VARCHAR" />
+    <result column="HOLDERNAME" property="holdername" jdbcType="VARCHAR" />
+    <result column="HOLDERTYPE2" property="holdertype2" jdbcType="VARCHAR" />
+    <result column="HOLDERNAME2" property="holdername2" jdbcType="VARCHAR" />
+    <result column="CARDTYPE2" property="cardtype2" jdbcType="VARCHAR" />
+    <result column="HOLDERTYPE3" property="holdertype3" jdbcType="VARCHAR" />
+    <result column="HOLDERNAME3" property="holdername3" jdbcType="VARCHAR" />
+    <result column="CARDTYPE3" property="cardtype3" jdbcType="VARCHAR" />
+    <result column="HOLDERTYPE4" property="holdertype4" jdbcType="VARCHAR" />
+    <result column="HOLDERNAME4" property="holdername4" jdbcType="VARCHAR" />
+    <result column="CARDTYPE4" property="cardtype4" jdbcType="VARCHAR" />
+    <result column="HOLDERTYPE5" property="holdertype5" jdbcType="VARCHAR" />
+    <result column="HOLDERNAME5" property="holdername5" jdbcType="VARCHAR" />
+    <result column="CARDTYPE5" property="cardtype5" jdbcType="VARCHAR" />
+    <result column="HOLDERTYPE6" property="holdertype6" jdbcType="VARCHAR" />
+    <result column="HOLDERNAME6" property="holdername6" jdbcType="VARCHAR" />
+    <result column="CARDTYPE6" property="cardtype6" jdbcType="VARCHAR" />
+    <result column="HOLDERTYPE7" property="holdertype7" jdbcType="VARCHAR" />
+    <result column="HOLDERNAME7" property="holdername7" jdbcType="VARCHAR" />
+    <result column="CARDTYPE7" property="cardtype7" jdbcType="VARCHAR" />
+    <result column="HOLDERTYPE8" property="holdertype8" jdbcType="VARCHAR" />
+    <result column="HOLDERNAME8" property="holdername8" jdbcType="VARCHAR" />
+    <result column="CARDTYPE8" property="cardtype8" jdbcType="VARCHAR" />
+    <result column="HOLDERTYPE9" property="holdertype9" jdbcType="VARCHAR" />
+    <result column="HOLDERNAME9" property="holdername9" jdbcType="VARCHAR" />
+    <result column="CARDTYPE9" property="cardtype9" jdbcType="VARCHAR" />
+    <result column="HOLDERTYPE10" property="holdertype10" jdbcType="VARCHAR" />
+    <result column="HOLDERNAME10" property="holdername10" jdbcType="VARCHAR" />
+    <result column="CARDTYPE10" property="cardtype10" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    SERIALNO, USERTYPE, UPDATEUSER, UPDATETIME, ETPNAME, ETPLEGALER, REGISTFUND, PAYMENTFUND, 
+    REGISTPROVINCE, REGISTCITY, REGISTPLACE, FOUNDTIME, MANAGEAREA, WORKPROVINCE, WORKCITY, 
+    WORKPLACE, GUILD, GUILDSEC, CARDTYPE, YESTERYEARINCOME, SHORTDEBT, LONGDEBT, ETPCREDIT, 
+    ETPCREDITFILE, ETPBADLOANNUM, ETPBADLOANMONEY, LEGALERCREDIT, LEGALERCREDITFILE, 
+    OVERDUENINETYNUM, OVERDUENUM, OVERDUEMONEY, OTHERLOAN, BANKLOANMONEY, BANKLOANNUM, 
+    PLATFORMLOANMONEY, PLATFORMLOANNUM, USETYPE, GAINTYPE, REPAYMENTCHANG, REPAYMENTMEMO, 
+    APPEALTYPE, APPEALPERSON, APPEALREASON, PENALTYTYPE, PENALTYORG, PENALTYREASON, DEGREE, 
+    MARRYTYPE, WORKYEAR, WORKTYPE, MONTHINCOME, MONTHPAY, PERCREDIT, PERCREDITFILE, SOCIETYNO, 
+    HOLDERTYPE, HOLDERNAME, HOLDERTYPE2, HOLDERNAME2, CARDTYPE2, HOLDERTYPE3, HOLDERNAME3, 
+    CARDTYPE3, HOLDERTYPE4, HOLDERNAME4, CARDTYPE4, HOLDERTYPE5, HOLDERNAME5, CARDTYPE5, 
+    HOLDERTYPE6, HOLDERNAME6, CARDTYPE6, HOLDERTYPE7, HOLDERNAME7, CARDTYPE7, HOLDERTYPE8, 
+    HOLDERNAME8, CARDTYPE8, HOLDERTYPE9, HOLDERNAME9, CARDTYPE9, HOLDERTYPE10, HOLDERNAME10, 
+    CARDTYPE10
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from PUBLISHINFO
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from PUBLISHINFO
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.xhc.test.mybatis.entity.Publishinfo" >
+    insert into PUBLISHINFO (SERIALNO, USERTYPE, UPDATEUSER, 
+      UPDATETIME, ETPNAME, ETPLEGALER, 
+      REGISTFUND, PAYMENTFUND, REGISTPROVINCE, 
+      REGISTCITY, REGISTPLACE, FOUNDTIME, 
+      MANAGEAREA, WORKPROVINCE, WORKCITY, 
+      WORKPLACE, GUILD, GUILDSEC, 
+      CARDTYPE, YESTERYEARINCOME, SHORTDEBT, 
+      LONGDEBT, ETPCREDIT, ETPCREDITFILE, 
+      ETPBADLOANNUM, ETPBADLOANMONEY, LEGALERCREDIT, 
+      LEGALERCREDITFILE, OVERDUENINETYNUM, OVERDUENUM, 
+      OVERDUEMONEY, OTHERLOAN, BANKLOANMONEY, 
+      BANKLOANNUM, PLATFORMLOANMONEY, PLATFORMLOANNUM, 
+      USETYPE, GAINTYPE, REPAYMENTCHANG, 
+      REPAYMENTMEMO, APPEALTYPE, APPEALPERSON, 
+      APPEALREASON, PENALTYTYPE, PENALTYORG, 
+      PENALTYREASON, DEGREE, MARRYTYPE, 
+      WORKYEAR, WORKTYPE, MONTHINCOME, 
+      MONTHPAY, PERCREDIT, PERCREDITFILE, 
+      SOCIETYNO, HOLDERTYPE, HOLDERNAME, 
+      HOLDERTYPE2, HOLDERNAME2, CARDTYPE2, 
+      HOLDERTYPE3, HOLDERNAME3, CARDTYPE3, 
+      HOLDERTYPE4, HOLDERNAME4, CARDTYPE4, 
+      HOLDERTYPE5, HOLDERNAME5, CARDTYPE5, 
+      HOLDERTYPE6, HOLDERNAME6, CARDTYPE6, 
+      HOLDERTYPE7, HOLDERNAME7, CARDTYPE7, 
+      HOLDERTYPE8, HOLDERNAME8, CARDTYPE8, 
+      HOLDERTYPE9, HOLDERNAME9, CARDTYPE9, 
+      HOLDERTYPE10, HOLDERNAME10, CARDTYPE10
+      )
+    values (#{serialno,jdbcType=VARCHAR}, #{usertype,jdbcType=VARCHAR}, #{updateuser,jdbcType=VARCHAR}, 
+      #{updatetime,jdbcType=VARCHAR}, #{etpname,jdbcType=VARCHAR}, #{etplegaler,jdbcType=VARCHAR}, 
+      #{registfund,jdbcType=DECIMAL}, #{paymentfund,jdbcType=DECIMAL}, #{registprovince,jdbcType=VARCHAR}, 
+      #{registcity,jdbcType=VARCHAR}, #{registplace,jdbcType=VARCHAR}, #{foundtime,jdbcType=VARCHAR}, 
+      #{managearea,jdbcType=VARCHAR}, #{workprovince,jdbcType=VARCHAR}, #{workcity,jdbcType=VARCHAR}, 
+      #{workplace,jdbcType=VARCHAR}, #{guild,jdbcType=VARCHAR}, #{guildsec,jdbcType=VARCHAR}, 
+      #{cardtype,jdbcType=VARCHAR}, #{yesteryearincome,jdbcType=DECIMAL}, #{shortdebt,jdbcType=DECIMAL}, 
+      #{longdebt,jdbcType=DECIMAL}, #{etpcredit,jdbcType=VARCHAR}, #{etpcreditfile,jdbcType=VARCHAR}, 
+      #{etpbadloannum,jdbcType=DECIMAL}, #{etpbadloanmoney,jdbcType=DECIMAL}, #{legalercredit,jdbcType=VARCHAR}, 
+      #{legalercreditfile,jdbcType=VARCHAR}, #{overdueninetynum,jdbcType=DECIMAL}, #{overduenum,jdbcType=DECIMAL}, 
+      #{overduemoney,jdbcType=DECIMAL}, #{otherloan,jdbcType=VARCHAR}, #{bankloanmoney,jdbcType=DECIMAL}, 
+      #{bankloannum,jdbcType=DECIMAL}, #{platformloanmoney,jdbcType=DECIMAL}, #{platformloannum,jdbcType=DECIMAL}, 
+      #{usetype,jdbcType=VARCHAR}, #{gaintype,jdbcType=VARCHAR}, #{repaymentchang,jdbcType=VARCHAR}, 
+      #{repaymentmemo,jdbcType=VARCHAR}, #{appealtype,jdbcType=VARCHAR}, #{appealperson,jdbcType=VARCHAR}, 
+      #{appealreason,jdbcType=VARCHAR}, #{penaltytype,jdbcType=VARCHAR}, #{penaltyorg,jdbcType=VARCHAR}, 
+      #{penaltyreason,jdbcType=VARCHAR}, #{degree,jdbcType=VARCHAR}, #{marrytype,jdbcType=VARCHAR}, 
+      #{workyear,jdbcType=VARCHAR}, #{worktype,jdbcType=VARCHAR}, #{monthincome,jdbcType=VARCHAR}, 
+      #{monthpay,jdbcType=VARCHAR}, #{percredit,jdbcType=VARCHAR}, #{percreditfile,jdbcType=VARCHAR}, 
+      #{societyno,jdbcType=VARCHAR}, #{holdertype,jdbcType=VARCHAR}, #{holdername,jdbcType=VARCHAR}, 
+      #{holdertype2,jdbcType=VARCHAR}, #{holdername2,jdbcType=VARCHAR}, #{cardtype2,jdbcType=VARCHAR}, 
+      #{holdertype3,jdbcType=VARCHAR}, #{holdername3,jdbcType=VARCHAR}, #{cardtype3,jdbcType=VARCHAR}, 
+      #{holdertype4,jdbcType=VARCHAR}, #{holdername4,jdbcType=VARCHAR}, #{cardtype4,jdbcType=VARCHAR}, 
+      #{holdertype5,jdbcType=VARCHAR}, #{holdername5,jdbcType=VARCHAR}, #{cardtype5,jdbcType=VARCHAR}, 
+      #{holdertype6,jdbcType=VARCHAR}, #{holdername6,jdbcType=VARCHAR}, #{cardtype6,jdbcType=VARCHAR}, 
+      #{holdertype7,jdbcType=VARCHAR}, #{holdername7,jdbcType=VARCHAR}, #{cardtype7,jdbcType=VARCHAR}, 
+      #{holdertype8,jdbcType=VARCHAR}, #{holdername8,jdbcType=VARCHAR}, #{cardtype8,jdbcType=VARCHAR}, 
+      #{holdertype9,jdbcType=VARCHAR}, #{holdername9,jdbcType=VARCHAR}, #{cardtype9,jdbcType=VARCHAR}, 
+      #{holdertype10,jdbcType=VARCHAR}, #{holdername10,jdbcType=VARCHAR}, #{cardtype10,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.xhc.test.mybatis.entity.Publishinfo" >
+    insert into PUBLISHINFO
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="serialno != null" >
+        SERIALNO,
+      </if>
+      <if test="usertype != null" >
+        USERTYPE,
+      </if>
+      <if test="updateuser != null" >
+        UPDATEUSER,
+      </if>
+      <if test="updatetime != null" >
+        UPDATETIME,
+      </if>
+      <if test="etpname != null" >
+        ETPNAME,
+      </if>
+      <if test="etplegaler != null" >
+        ETPLEGALER,
+      </if>
+      <if test="registfund != null" >
+        REGISTFUND,
+      </if>
+      <if test="paymentfund != null" >
+        PAYMENTFUND,
+      </if>
+      <if test="registprovince != null" >
+        REGISTPROVINCE,
+      </if>
+      <if test="registcity != null" >
+        REGISTCITY,
+      </if>
+      <if test="registplace != null" >
+        REGISTPLACE,
+      </if>
+      <if test="foundtime != null" >
+        FOUNDTIME,
+      </if>
+      <if test="managearea != null" >
+        MANAGEAREA,
+      </if>
+      <if test="workprovince != null" >
+        WORKPROVINCE,
+      </if>
+      <if test="workcity != null" >
+        WORKCITY,
+      </if>
+      <if test="workplace != null" >
+        WORKPLACE,
+      </if>
+      <if test="guild != null" >
+        GUILD,
+      </if>
+      <if test="guildsec != null" >
+        GUILDSEC,
+      </if>
+      <if test="cardtype != null" >
+        CARDTYPE,
+      </if>
+      <if test="yesteryearincome != null" >
+        YESTERYEARINCOME,
+      </if>
+      <if test="shortdebt != null" >
+        SHORTDEBT,
+      </if>
+      <if test="longdebt != null" >
+        LONGDEBT,
+      </if>
+      <if test="etpcredit != null" >
+        ETPCREDIT,
+      </if>
+      <if test="etpcreditfile != null" >
+        ETPCREDITFILE,
+      </if>
+      <if test="etpbadloannum != null" >
+        ETPBADLOANNUM,
+      </if>
+      <if test="etpbadloanmoney != null" >
+        ETPBADLOANMONEY,
+      </if>
+      <if test="legalercredit != null" >
+        LEGALERCREDIT,
+      </if>
+      <if test="legalercreditfile != null" >
+        LEGALERCREDITFILE,
+      </if>
+      <if test="overdueninetynum != null" >
+        OVERDUENINETYNUM,
+      </if>
+      <if test="overduenum != null" >
+        OVERDUENUM,
+      </if>
+      <if test="overduemoney != null" >
+        OVERDUEMONEY,
+      </if>
+      <if test="otherloan != null" >
+        OTHERLOAN,
+      </if>
+      <if test="bankloanmoney != null" >
+        BANKLOANMONEY,
+      </if>
+      <if test="bankloannum != null" >
+        BANKLOANNUM,
+      </if>
+      <if test="platformloanmoney != null" >
+        PLATFORMLOANMONEY,
+      </if>
+      <if test="platformloannum != null" >
+        PLATFORMLOANNUM,
+      </if>
+      <if test="usetype != null" >
+        USETYPE,
+      </if>
+      <if test="gaintype != null" >
+        GAINTYPE,
+      </if>
+      <if test="repaymentchang != null" >
+        REPAYMENTCHANG,
+      </if>
+      <if test="repaymentmemo != null" >
+        REPAYMENTMEMO,
+      </if>
+      <if test="appealtype != null" >
+        APPEALTYPE,
+      </if>
+      <if test="appealperson != null" >
+        APPEALPERSON,
+      </if>
+      <if test="appealreason != null" >
+        APPEALREASON,
+      </if>
+      <if test="penaltytype != null" >
+        PENALTYTYPE,
+      </if>
+      <if test="penaltyorg != null" >
+        PENALTYORG,
+      </if>
+      <if test="penaltyreason != null" >
+        PENALTYREASON,
+      </if>
+      <if test="degree != null" >
+        DEGREE,
+      </if>
+      <if test="marrytype != null" >
+        MARRYTYPE,
+      </if>
+      <if test="workyear != null" >
+        WORKYEAR,
+      </if>
+      <if test="worktype != null" >
+        WORKTYPE,
+      </if>
+      <if test="monthincome != null" >
+        MONTHINCOME,
+      </if>
+      <if test="monthpay != null" >
+        MONTHPAY,
+      </if>
+      <if test="percredit != null" >
+        PERCREDIT,
+      </if>
+      <if test="percreditfile != null" >
+        PERCREDITFILE,
+      </if>
+      <if test="societyno != null" >
+        SOCIETYNO,
+      </if>
+      <if test="holdertype != null" >
+        HOLDERTYPE,
+      </if>
+      <if test="holdername != null" >
+        HOLDERNAME,
+      </if>
+      <if test="holdertype2 != null" >
+        HOLDERTYPE2,
+      </if>
+      <if test="holdername2 != null" >
+        HOLDERNAME2,
+      </if>
+      <if test="cardtype2 != null" >
+        CARDTYPE2,
+      </if>
+      <if test="holdertype3 != null" >
+        HOLDERTYPE3,
+      </if>
+      <if test="holdername3 != null" >
+        HOLDERNAME3,
+      </if>
+      <if test="cardtype3 != null" >
+        CARDTYPE3,
+      </if>
+      <if test="holdertype4 != null" >
+        HOLDERTYPE4,
+      </if>
+      <if test="holdername4 != null" >
+        HOLDERNAME4,
+      </if>
+      <if test="cardtype4 != null" >
+        CARDTYPE4,
+      </if>
+      <if test="holdertype5 != null" >
+        HOLDERTYPE5,
+      </if>
+      <if test="holdername5 != null" >
+        HOLDERNAME5,
+      </if>
+      <if test="cardtype5 != null" >
+        CARDTYPE5,
+      </if>
+      <if test="holdertype6 != null" >
+        HOLDERTYPE6,
+      </if>
+      <if test="holdername6 != null" >
+        HOLDERNAME6,
+      </if>
+      <if test="cardtype6 != null" >
+        CARDTYPE6,
+      </if>
+      <if test="holdertype7 != null" >
+        HOLDERTYPE7,
+      </if>
+      <if test="holdername7 != null" >
+        HOLDERNAME7,
+      </if>
+      <if test="cardtype7 != null" >
+        CARDTYPE7,
+      </if>
+      <if test="holdertype8 != null" >
+        HOLDERTYPE8,
+      </if>
+      <if test="holdername8 != null" >
+        HOLDERNAME8,
+      </if>
+      <if test="cardtype8 != null" >
+        CARDTYPE8,
+      </if>
+      <if test="holdertype9 != null" >
+        HOLDERTYPE9,
+      </if>
+      <if test="holdername9 != null" >
+        HOLDERNAME9,
+      </if>
+      <if test="cardtype9 != null" >
+        CARDTYPE9,
+      </if>
+      <if test="holdertype10 != null" >
+        HOLDERTYPE10,
+      </if>
+      <if test="holdername10 != null" >
+        HOLDERNAME10,
+      </if>
+      <if test="cardtype10 != null" >
+        CARDTYPE10,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="serialno != null" >
+        #{serialno,jdbcType=VARCHAR},
+      </if>
+      <if test="usertype != null" >
+        #{usertype,jdbcType=VARCHAR},
+      </if>
+      <if test="updateuser != null" >
+        #{updateuser,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null" >
+        #{updatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="etpname != null" >
+        #{etpname,jdbcType=VARCHAR},
+      </if>
+      <if test="etplegaler != null" >
+        #{etplegaler,jdbcType=VARCHAR},
+      </if>
+      <if test="registfund != null" >
+        #{registfund,jdbcType=DECIMAL},
+      </if>
+      <if test="paymentfund != null" >
+        #{paymentfund,jdbcType=DECIMAL},
+      </if>
+      <if test="registprovince != null" >
+        #{registprovince,jdbcType=VARCHAR},
+      </if>
+      <if test="registcity != null" >
+        #{registcity,jdbcType=VARCHAR},
+      </if>
+      <if test="registplace != null" >
+        #{registplace,jdbcType=VARCHAR},
+      </if>
+      <if test="foundtime != null" >
+        #{foundtime,jdbcType=VARCHAR},
+      </if>
+      <if test="managearea != null" >
+        #{managearea,jdbcType=VARCHAR},
+      </if>
+      <if test="workprovince != null" >
+        #{workprovince,jdbcType=VARCHAR},
+      </if>
+      <if test="workcity != null" >
+        #{workcity,jdbcType=VARCHAR},
+      </if>
+      <if test="workplace != null" >
+        #{workplace,jdbcType=VARCHAR},
+      </if>
+      <if test="guild != null" >
+        #{guild,jdbcType=VARCHAR},
+      </if>
+      <if test="guildsec != null" >
+        #{guildsec,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype != null" >
+        #{cardtype,jdbcType=VARCHAR},
+      </if>
+      <if test="yesteryearincome != null" >
+        #{yesteryearincome,jdbcType=DECIMAL},
+      </if>
+      <if test="shortdebt != null" >
+        #{shortdebt,jdbcType=DECIMAL},
+      </if>
+      <if test="longdebt != null" >
+        #{longdebt,jdbcType=DECIMAL},
+      </if>
+      <if test="etpcredit != null" >
+        #{etpcredit,jdbcType=VARCHAR},
+      </if>
+      <if test="etpcreditfile != null" >
+        #{etpcreditfile,jdbcType=VARCHAR},
+      </if>
+      <if test="etpbadloannum != null" >
+        #{etpbadloannum,jdbcType=DECIMAL},
+      </if>
+      <if test="etpbadloanmoney != null" >
+        #{etpbadloanmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="legalercredit != null" >
+        #{legalercredit,jdbcType=VARCHAR},
+      </if>
+      <if test="legalercreditfile != null" >
+        #{legalercreditfile,jdbcType=VARCHAR},
+      </if>
+      <if test="overdueninetynum != null" >
+        #{overdueninetynum,jdbcType=DECIMAL},
+      </if>
+      <if test="overduenum != null" >
+        #{overduenum,jdbcType=DECIMAL},
+      </if>
+      <if test="overduemoney != null" >
+        #{overduemoney,jdbcType=DECIMAL},
+      </if>
+      <if test="otherloan != null" >
+        #{otherloan,jdbcType=VARCHAR},
+      </if>
+      <if test="bankloanmoney != null" >
+        #{bankloanmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="bankloannum != null" >
+        #{bankloannum,jdbcType=DECIMAL},
+      </if>
+      <if test="platformloanmoney != null" >
+        #{platformloanmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="platformloannum != null" >
+        #{platformloannum,jdbcType=DECIMAL},
+      </if>
+      <if test="usetype != null" >
+        #{usetype,jdbcType=VARCHAR},
+      </if>
+      <if test="gaintype != null" >
+        #{gaintype,jdbcType=VARCHAR},
+      </if>
+      <if test="repaymentchang != null" >
+        #{repaymentchang,jdbcType=VARCHAR},
+      </if>
+      <if test="repaymentmemo != null" >
+        #{repaymentmemo,jdbcType=VARCHAR},
+      </if>
+      <if test="appealtype != null" >
+        #{appealtype,jdbcType=VARCHAR},
+      </if>
+      <if test="appealperson != null" >
+        #{appealperson,jdbcType=VARCHAR},
+      </if>
+      <if test="appealreason != null" >
+        #{appealreason,jdbcType=VARCHAR},
+      </if>
+      <if test="penaltytype != null" >
+        #{penaltytype,jdbcType=VARCHAR},
+      </if>
+      <if test="penaltyorg != null" >
+        #{penaltyorg,jdbcType=VARCHAR},
+      </if>
+      <if test="penaltyreason != null" >
+        #{penaltyreason,jdbcType=VARCHAR},
+      </if>
+      <if test="degree != null" >
+        #{degree,jdbcType=VARCHAR},
+      </if>
+      <if test="marrytype != null" >
+        #{marrytype,jdbcType=VARCHAR},
+      </if>
+      <if test="workyear != null" >
+        #{workyear,jdbcType=VARCHAR},
+      </if>
+      <if test="worktype != null" >
+        #{worktype,jdbcType=VARCHAR},
+      </if>
+      <if test="monthincome != null" >
+        #{monthincome,jdbcType=VARCHAR},
+      </if>
+      <if test="monthpay != null" >
+        #{monthpay,jdbcType=VARCHAR},
+      </if>
+      <if test="percredit != null" >
+        #{percredit,jdbcType=VARCHAR},
+      </if>
+      <if test="percreditfile != null" >
+        #{percreditfile,jdbcType=VARCHAR},
+      </if>
+      <if test="societyno != null" >
+        #{societyno,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype != null" >
+        #{holdertype,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername != null" >
+        #{holdername,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype2 != null" >
+        #{holdertype2,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername2 != null" >
+        #{holdername2,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype2 != null" >
+        #{cardtype2,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype3 != null" >
+        #{holdertype3,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername3 != null" >
+        #{holdername3,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype3 != null" >
+        #{cardtype3,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype4 != null" >
+        #{holdertype4,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername4 != null" >
+        #{holdername4,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype4 != null" >
+        #{cardtype4,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype5 != null" >
+        #{holdertype5,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername5 != null" >
+        #{holdername5,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype5 != null" >
+        #{cardtype5,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype6 != null" >
+        #{holdertype6,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername6 != null" >
+        #{holdername6,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype6 != null" >
+        #{cardtype6,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype7 != null" >
+        #{holdertype7,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername7 != null" >
+        #{holdername7,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype7 != null" >
+        #{cardtype7,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype8 != null" >
+        #{holdertype8,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername8 != null" >
+        #{holdername8,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype8 != null" >
+        #{cardtype8,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype9 != null" >
+        #{holdertype9,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername9 != null" >
+        #{holdername9,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype9 != null" >
+        #{cardtype9,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype10 != null" >
+        #{holdertype10,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername10 != null" >
+        #{holdername10,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype10 != null" >
+        #{cardtype10,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xhc.test.mybatis.entity.Publishinfo" >
+    update PUBLISHINFO
+    <set >
+      <if test="usertype != null" >
+        USERTYPE = #{usertype,jdbcType=VARCHAR},
+      </if>
+      <if test="updateuser != null" >
+        UPDATEUSER = #{updateuser,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null" >
+        UPDATETIME = #{updatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="etpname != null" >
+        ETPNAME = #{etpname,jdbcType=VARCHAR},
+      </if>
+      <if test="etplegaler != null" >
+        ETPLEGALER = #{etplegaler,jdbcType=VARCHAR},
+      </if>
+      <if test="registfund != null" >
+        REGISTFUND = #{registfund,jdbcType=DECIMAL},
+      </if>
+      <if test="paymentfund != null" >
+        PAYMENTFUND = #{paymentfund,jdbcType=DECIMAL},
+      </if>
+      <if test="registprovince != null" >
+        REGISTPROVINCE = #{registprovince,jdbcType=VARCHAR},
+      </if>
+      <if test="registcity != null" >
+        REGISTCITY = #{registcity,jdbcType=VARCHAR},
+      </if>
+      <if test="registplace != null" >
+        REGISTPLACE = #{registplace,jdbcType=VARCHAR},
+      </if>
+      <if test="foundtime != null" >
+        FOUNDTIME = #{foundtime,jdbcType=VARCHAR},
+      </if>
+      <if test="managearea != null" >
+        MANAGEAREA = #{managearea,jdbcType=VARCHAR},
+      </if>
+      <if test="workprovince != null" >
+        WORKPROVINCE = #{workprovince,jdbcType=VARCHAR},
+      </if>
+      <if test="workcity != null" >
+        WORKCITY = #{workcity,jdbcType=VARCHAR},
+      </if>
+      <if test="workplace != null" >
+        WORKPLACE = #{workplace,jdbcType=VARCHAR},
+      </if>
+      <if test="guild != null" >
+        GUILD = #{guild,jdbcType=VARCHAR},
+      </if>
+      <if test="guildsec != null" >
+        GUILDSEC = #{guildsec,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype != null" >
+        CARDTYPE = #{cardtype,jdbcType=VARCHAR},
+      </if>
+      <if test="yesteryearincome != null" >
+        YESTERYEARINCOME = #{yesteryearincome,jdbcType=DECIMAL},
+      </if>
+      <if test="shortdebt != null" >
+        SHORTDEBT = #{shortdebt,jdbcType=DECIMAL},
+      </if>
+      <if test="longdebt != null" >
+        LONGDEBT = #{longdebt,jdbcType=DECIMAL},
+      </if>
+      <if test="etpcredit != null" >
+        ETPCREDIT = #{etpcredit,jdbcType=VARCHAR},
+      </if>
+      <if test="etpcreditfile != null" >
+        ETPCREDITFILE = #{etpcreditfile,jdbcType=VARCHAR},
+      </if>
+      <if test="etpbadloannum != null" >
+        ETPBADLOANNUM = #{etpbadloannum,jdbcType=DECIMAL},
+      </if>
+      <if test="etpbadloanmoney != null" >
+        ETPBADLOANMONEY = #{etpbadloanmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="legalercredit != null" >
+        LEGALERCREDIT = #{legalercredit,jdbcType=VARCHAR},
+      </if>
+      <if test="legalercreditfile != null" >
+        LEGALERCREDITFILE = #{legalercreditfile,jdbcType=VARCHAR},
+      </if>
+      <if test="overdueninetynum != null" >
+        OVERDUENINETYNUM = #{overdueninetynum,jdbcType=DECIMAL},
+      </if>
+      <if test="overduenum != null" >
+        OVERDUENUM = #{overduenum,jdbcType=DECIMAL},
+      </if>
+      <if test="overduemoney != null" >
+        OVERDUEMONEY = #{overduemoney,jdbcType=DECIMAL},
+      </if>
+      <if test="otherloan != null" >
+        OTHERLOAN = #{otherloan,jdbcType=VARCHAR},
+      </if>
+      <if test="bankloanmoney != null" >
+        BANKLOANMONEY = #{bankloanmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="bankloannum != null" >
+        BANKLOANNUM = #{bankloannum,jdbcType=DECIMAL},
+      </if>
+      <if test="platformloanmoney != null" >
+        PLATFORMLOANMONEY = #{platformloanmoney,jdbcType=DECIMAL},
+      </if>
+      <if test="platformloannum != null" >
+        PLATFORMLOANNUM = #{platformloannum,jdbcType=DECIMAL},
+      </if>
+      <if test="usetype != null" >
+        USETYPE = #{usetype,jdbcType=VARCHAR},
+      </if>
+      <if test="gaintype != null" >
+        GAINTYPE = #{gaintype,jdbcType=VARCHAR},
+      </if>
+      <if test="repaymentchang != null" >
+        REPAYMENTCHANG = #{repaymentchang,jdbcType=VARCHAR},
+      </if>
+      <if test="repaymentmemo != null" >
+        REPAYMENTMEMO = #{repaymentmemo,jdbcType=VARCHAR},
+      </if>
+      <if test="appealtype != null" >
+        APPEALTYPE = #{appealtype,jdbcType=VARCHAR},
+      </if>
+      <if test="appealperson != null" >
+        APPEALPERSON = #{appealperson,jdbcType=VARCHAR},
+      </if>
+      <if test="appealreason != null" >
+        APPEALREASON = #{appealreason,jdbcType=VARCHAR},
+      </if>
+      <if test="penaltytype != null" >
+        PENALTYTYPE = #{penaltytype,jdbcType=VARCHAR},
+      </if>
+      <if test="penaltyorg != null" >
+        PENALTYORG = #{penaltyorg,jdbcType=VARCHAR},
+      </if>
+      <if test="penaltyreason != null" >
+        PENALTYREASON = #{penaltyreason,jdbcType=VARCHAR},
+      </if>
+      <if test="degree != null" >
+        DEGREE = #{degree,jdbcType=VARCHAR},
+      </if>
+      <if test="marrytype != null" >
+        MARRYTYPE = #{marrytype,jdbcType=VARCHAR},
+      </if>
+      <if test="workyear != null" >
+        WORKYEAR = #{workyear,jdbcType=VARCHAR},
+      </if>
+      <if test="worktype != null" >
+        WORKTYPE = #{worktype,jdbcType=VARCHAR},
+      </if>
+      <if test="monthincome != null" >
+        MONTHINCOME = #{monthincome,jdbcType=VARCHAR},
+      </if>
+      <if test="monthpay != null" >
+        MONTHPAY = #{monthpay,jdbcType=VARCHAR},
+      </if>
+      <if test="percredit != null" >
+        PERCREDIT = #{percredit,jdbcType=VARCHAR},
+      </if>
+      <if test="percreditfile != null" >
+        PERCREDITFILE = #{percreditfile,jdbcType=VARCHAR},
+      </if>
+      <if test="societyno != null" >
+        SOCIETYNO = #{societyno,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype != null" >
+        HOLDERTYPE = #{holdertype,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername != null" >
+        HOLDERNAME = #{holdername,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype2 != null" >
+        HOLDERTYPE2 = #{holdertype2,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername2 != null" >
+        HOLDERNAME2 = #{holdername2,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype2 != null" >
+        CARDTYPE2 = #{cardtype2,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype3 != null" >
+        HOLDERTYPE3 = #{holdertype3,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername3 != null" >
+        HOLDERNAME3 = #{holdername3,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype3 != null" >
+        CARDTYPE3 = #{cardtype3,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype4 != null" >
+        HOLDERTYPE4 = #{holdertype4,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername4 != null" >
+        HOLDERNAME4 = #{holdername4,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype4 != null" >
+        CARDTYPE4 = #{cardtype4,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype5 != null" >
+        HOLDERTYPE5 = #{holdertype5,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername5 != null" >
+        HOLDERNAME5 = #{holdername5,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype5 != null" >
+        CARDTYPE5 = #{cardtype5,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype6 != null" >
+        HOLDERTYPE6 = #{holdertype6,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername6 != null" >
+        HOLDERNAME6 = #{holdername6,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype6 != null" >
+        CARDTYPE6 = #{cardtype6,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype7 != null" >
+        HOLDERTYPE7 = #{holdertype7,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername7 != null" >
+        HOLDERNAME7 = #{holdername7,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype7 != null" >
+        CARDTYPE7 = #{cardtype7,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype8 != null" >
+        HOLDERTYPE8 = #{holdertype8,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername8 != null" >
+        HOLDERNAME8 = #{holdername8,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype8 != null" >
+        CARDTYPE8 = #{cardtype8,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype9 != null" >
+        HOLDERTYPE9 = #{holdertype9,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername9 != null" >
+        HOLDERNAME9 = #{holdername9,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype9 != null" >
+        CARDTYPE9 = #{cardtype9,jdbcType=VARCHAR},
+      </if>
+      <if test="holdertype10 != null" >
+        HOLDERTYPE10 = #{holdertype10,jdbcType=VARCHAR},
+      </if>
+      <if test="holdername10 != null" >
+        HOLDERNAME10 = #{holdername10,jdbcType=VARCHAR},
+      </if>
+      <if test="cardtype10 != null" >
+        CARDTYPE10 = #{cardtype10,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xhc.test.mybatis.entity.Publishinfo" >
+    update PUBLISHINFO
+    set USERTYPE = #{usertype,jdbcType=VARCHAR},
+      UPDATEUSER = #{updateuser,jdbcType=VARCHAR},
+      UPDATETIME = #{updatetime,jdbcType=VARCHAR},
+      ETPNAME = #{etpname,jdbcType=VARCHAR},
+      ETPLEGALER = #{etplegaler,jdbcType=VARCHAR},
+      REGISTFUND = #{registfund,jdbcType=DECIMAL},
+      PAYMENTFUND = #{paymentfund,jdbcType=DECIMAL},
+      REGISTPROVINCE = #{registprovince,jdbcType=VARCHAR},
+      REGISTCITY = #{registcity,jdbcType=VARCHAR},
+      REGISTPLACE = #{registplace,jdbcType=VARCHAR},
+      FOUNDTIME = #{foundtime,jdbcType=VARCHAR},
+      MANAGEAREA = #{managearea,jdbcType=VARCHAR},
+      WORKPROVINCE = #{workprovince,jdbcType=VARCHAR},
+      WORKCITY = #{workcity,jdbcType=VARCHAR},
+      WORKPLACE = #{workplace,jdbcType=VARCHAR},
+      GUILD = #{guild,jdbcType=VARCHAR},
+      GUILDSEC = #{guildsec,jdbcType=VARCHAR},
+      CARDTYPE = #{cardtype,jdbcType=VARCHAR},
+      YESTERYEARINCOME = #{yesteryearincome,jdbcType=DECIMAL},
+      SHORTDEBT = #{shortdebt,jdbcType=DECIMAL},
+      LONGDEBT = #{longdebt,jdbcType=DECIMAL},
+      ETPCREDIT = #{etpcredit,jdbcType=VARCHAR},
+      ETPCREDITFILE = #{etpcreditfile,jdbcType=VARCHAR},
+      ETPBADLOANNUM = #{etpbadloannum,jdbcType=DECIMAL},
+      ETPBADLOANMONEY = #{etpbadloanmoney,jdbcType=DECIMAL},
+      LEGALERCREDIT = #{legalercredit,jdbcType=VARCHAR},
+      LEGALERCREDITFILE = #{legalercreditfile,jdbcType=VARCHAR},
+      OVERDUENINETYNUM = #{overdueninetynum,jdbcType=DECIMAL},
+      OVERDUENUM = #{overduenum,jdbcType=DECIMAL},
+      OVERDUEMONEY = #{overduemoney,jdbcType=DECIMAL},
+      OTHERLOAN = #{otherloan,jdbcType=VARCHAR},
+      BANKLOANMONEY = #{bankloanmoney,jdbcType=DECIMAL},
+      BANKLOANNUM = #{bankloannum,jdbcType=DECIMAL},
+      PLATFORMLOANMONEY = #{platformloanmoney,jdbcType=DECIMAL},
+      PLATFORMLOANNUM = #{platformloannum,jdbcType=DECIMAL},
+      USETYPE = #{usetype,jdbcType=VARCHAR},
+      GAINTYPE = #{gaintype,jdbcType=VARCHAR},
+      REPAYMENTCHANG = #{repaymentchang,jdbcType=VARCHAR},
+      REPAYMENTMEMO = #{repaymentmemo,jdbcType=VARCHAR},
+      APPEALTYPE = #{appealtype,jdbcType=VARCHAR},
+      APPEALPERSON = #{appealperson,jdbcType=VARCHAR},
+      APPEALREASON = #{appealreason,jdbcType=VARCHAR},
+      PENALTYTYPE = #{penaltytype,jdbcType=VARCHAR},
+      PENALTYORG = #{penaltyorg,jdbcType=VARCHAR},
+      PENALTYREASON = #{penaltyreason,jdbcType=VARCHAR},
+      DEGREE = #{degree,jdbcType=VARCHAR},
+      MARRYTYPE = #{marrytype,jdbcType=VARCHAR},
+      WORKYEAR = #{workyear,jdbcType=VARCHAR},
+      WORKTYPE = #{worktype,jdbcType=VARCHAR},
+      MONTHINCOME = #{monthincome,jdbcType=VARCHAR},
+      MONTHPAY = #{monthpay,jdbcType=VARCHAR},
+      PERCREDIT = #{percredit,jdbcType=VARCHAR},
+      PERCREDITFILE = #{percreditfile,jdbcType=VARCHAR},
+      SOCIETYNO = #{societyno,jdbcType=VARCHAR},
+      HOLDERTYPE = #{holdertype,jdbcType=VARCHAR},
+      HOLDERNAME = #{holdername,jdbcType=VARCHAR},
+      HOLDERTYPE2 = #{holdertype2,jdbcType=VARCHAR},
+      HOLDERNAME2 = #{holdername2,jdbcType=VARCHAR},
+      CARDTYPE2 = #{cardtype2,jdbcType=VARCHAR},
+      HOLDERTYPE3 = #{holdertype3,jdbcType=VARCHAR},
+      HOLDERNAME3 = #{holdername3,jdbcType=VARCHAR},
+      CARDTYPE3 = #{cardtype3,jdbcType=VARCHAR},
+      HOLDERTYPE4 = #{holdertype4,jdbcType=VARCHAR},
+      HOLDERNAME4 = #{holdername4,jdbcType=VARCHAR},
+      CARDTYPE4 = #{cardtype4,jdbcType=VARCHAR},
+      HOLDERTYPE5 = #{holdertype5,jdbcType=VARCHAR},
+      HOLDERNAME5 = #{holdername5,jdbcType=VARCHAR},
+      CARDTYPE5 = #{cardtype5,jdbcType=VARCHAR},
+      HOLDERTYPE6 = #{holdertype6,jdbcType=VARCHAR},
+      HOLDERNAME6 = #{holdername6,jdbcType=VARCHAR},
+      CARDTYPE6 = #{cardtype6,jdbcType=VARCHAR},
+      HOLDERTYPE7 = #{holdertype7,jdbcType=VARCHAR},
+      HOLDERNAME7 = #{holdername7,jdbcType=VARCHAR},
+      CARDTYPE7 = #{cardtype7,jdbcType=VARCHAR},
+      HOLDERTYPE8 = #{holdertype8,jdbcType=VARCHAR},
+      HOLDERNAME8 = #{holdername8,jdbcType=VARCHAR},
+      CARDTYPE8 = #{cardtype8,jdbcType=VARCHAR},
+      HOLDERTYPE9 = #{holdertype9,jdbcType=VARCHAR},
+      HOLDERNAME9 = #{holdername9,jdbcType=VARCHAR},
+      CARDTYPE9 = #{cardtype9,jdbcType=VARCHAR},
+      HOLDERTYPE10 = #{holdertype10,jdbcType=VARCHAR},
+      HOLDERNAME10 = #{holdername10,jdbcType=VARCHAR},
+      CARDTYPE10 = #{cardtype10,jdbcType=VARCHAR}
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </update>
+</mapper>
